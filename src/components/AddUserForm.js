@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function AddUserForm() {
+function AddUserForm({ addUser }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [gen, setGen] = useState("");
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addUser({ name, email, gen });
+    setName("");
+    setEmail("");
+    setGen("");
+  };
   return (
     <div>
       <Form>
@@ -46,7 +52,7 @@ function AddUserForm() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onClick={handleSubmit}>
           Submit
         </Button>
       </Form>

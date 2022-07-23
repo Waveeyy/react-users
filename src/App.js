@@ -12,12 +12,15 @@ function App() {
     { name: "Nana Ab", email: "nanaab@gmail.com", gen: "22" },
     { name: "Kwabena", email: "nanakwabena@gmail.com", gen: "22" },
   ]);
+  const newUser = (user) => {
+    setUsers([...users, { name: user.name, email: user.email, gen: user.gen }]);
+  };
   return (
     <div>
       <Container>
         <Row>
           <Col md={6}>
-            <AddUserForm />
+            <AddUserForm addUser={newUser} />
           </Col>
           <Col md={6}>
             <AllUsers userData={users} />
