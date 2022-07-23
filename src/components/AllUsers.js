@@ -13,8 +13,8 @@ function AllUsers({ userData }) {
                 Email: {item.email}
               </Card.Subtitle>
               <Card.Text>Gen: {item.gen}</Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Link href="#">Edit</Card.Link>
+              <Card.Link href="#">Delete</Card.Link>
             </Card.Body>
           </Card>
         );
