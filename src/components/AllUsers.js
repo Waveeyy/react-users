@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
+import { Container, Row } from "react-bootstrap";
+import User from "./User";
 
-function AllUsers({ userData }) {
+function AllUsers(props) {
   return (
-    <div>
-      {userData.map((item, index) => {
-        return (
-          <Card key={index} style={{ width: "18rem" }}>
-            <Card.Body>
-              <Card.Title>Name: {item.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                Email: {item.email}
-              </Card.Subtitle>
-              <Card.Text>Gen: {item.gen}</Card.Text>
-              <Card.Link href="#">Edit</Card.Link>
-              <Card.Link href="#">Delete</Card.Link>
-            </Card.Body>
-          </Card>
-        );
-      })}
-    </div>
+    <>
+      <Container>
+        <Row>
+          {props.userData.map((item, index) => {
+            return (
+              <User
+                key={index}
+                userInfo={item}
+                deleteUser={props.deleteUser}
+                editUser={props.editUser}
+              />
+            );
+          })}
+        </Row>
+      </Container>
+    </>
   );
 }
 

@@ -13,6 +13,7 @@ function AddUserForm({ addUser }) {
     setEmail("");
     setGen("");
   };
+
   return (
     <div>
       <Form>
