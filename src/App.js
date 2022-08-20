@@ -9,13 +9,13 @@ import React, { useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([
-    { name: "Nana Ab", email: "nanaab@gmail.com", gen: "22", id: "sjhsjndcnd" },
-    {
-      name: "Kwabena",
-      email: "nanakwabena@gmail.com",
-      gen: "22",
-      id: "kjkdjskd",
-    },
+    // { name: "Nana Ab", email: "nanaab@gmail.com", gen: "22", id: "sjhsjndcnd" },
+    // {
+    //   name: "Kwabena",
+    //   email: "nanakwabena@gmail.com",
+    //   gen: "22",
+    //   id: "kjkdjskd",
+    // },
   ]);
   const newUser = (user) => {
     user.id = Math.random().toString(36);
